@@ -18,15 +18,17 @@ Building off of what we've learned about creating tables and column types in the
 Let's take a look at this lab's structure, which will seem slightly different than what you've been working with before.
 
 ```bash
+├── Gemfile
+├── README.md
 ├── bin
-│   ├── environment.rb # loads dependencies via Bundler
-│   ├── run.rb # runs sql_runner.rb
-│   └── sql_runner.rb # a ruby class that handles creating a database connection and executing your SQL files
+│   ├── environment.rb # requires bundler and files
+│   ├── run.rb # instantiates the SQLRunner class in the below file
+│   └── sql_runner.rb # holds a class that handles executing your .sql files
 ├── lib
-│   └── create_table.sql # where you'll be writing your CREATE statement
-└── spec
-    ├── spec_helper.rb
-    └── create_table_spec.rb # the spec for this lab
+│   ├── create_table.sql # where you create your schema
+└── spec # all the specs
+    ├── create_table_spec.rb # this tests your create_table.sql file
+    └── spec_helper.rb
 ```
 
 The way SQL labs work is that you'll write your SQL statements in `.sql` files in the `lib/` directory, and the `run.rb` file in `bin/` will execute them using the `sql_runner.rb` class. When you run the tests, the SQLRunner class is called and a new database is created in memory for the tests.
