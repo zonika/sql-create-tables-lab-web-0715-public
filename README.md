@@ -25,9 +25,9 @@ Let's take a look at this lab's structure, which will seem slightly different th
 │   ├── run.rb # instantiates the SQLRunner class in the below file
 │   └── sql_runner.rb # holds a class that handles executing your .sql files
 ├── lib
-│   ├── create_table.sql # where you create your schema
+│   ├── create.sql # where you create your schema
 └── spec # all the specs
-    ├── create_table_spec.rb # this tests your create_table.sql file
+    ├── create_spec.rb # this tests your create_table.sql file
     └── spec_helper.rb
 ```
 
