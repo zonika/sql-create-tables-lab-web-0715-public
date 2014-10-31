@@ -1,8 +1,9 @@
 describe "Creating a cats table" do
   before do
     @db = SQLite3::Database.new(':memory:')
+    SQLRunner.make_methods
     @sql_runner = SQLRunner.new(@db)
-    @sql_runner.execute_sql_file
+    @sql_runner.execute_sql_create
   end
  
   it "creates a cats table with a name field" do
