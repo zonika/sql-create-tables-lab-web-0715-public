@@ -10,7 +10,7 @@ describe "Creating a cats table" do
     expect{@db.execute("SELECT name FROM cats;")}.to_not raise_exception
   end
 
-  it "creates a cats table with a age field" do
+  it "creates a cats table with an age field" do
     expect{@db.execute("SELECT age FROM cats;")}.to_not raise_exception
   end
 
