@@ -1,8 +1,4 @@
----
-tags: sql, creating tables, introductory, micro
-languages: sql
-resources: 
----
+
 
 # Sql Create Tables Lab
 
