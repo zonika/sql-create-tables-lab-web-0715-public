@@ -1,11 +1,10 @@
 describe "Creating a cats table" do
   before do
     @db = SQLite3::Database.new(':memory:')
-    SQLRunner.make_methods
     @sql_runner = SQLRunner.new(@db)
     @sql_runner.execute_sql_create
   end
- 
+
   it "creates a cats table with a name field" do
     expect{@db.execute("SELECT name FROM cats;")}.to_not raise_exception
   end
